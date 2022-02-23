@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: login
+  datasource: 
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-52-204-196-4.compute-1.amazonaws.com:5432/d2dhoafa469663
+    username: ievdatfqhvojdl
+    password: 0535ff3f7e0ef98a6a258d65b59d3035a40a8e7dd5ee89f734e31a7d4daf05e7
+  jpa:
+    database: postgresql
+    openInView: true
+    show-sql: true
+    hibernate:
+      #ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+security:
+  jwt:
+    token:
+      secret-key: secret
+      expire-length: 300000 
+server:
+  port: 5000
